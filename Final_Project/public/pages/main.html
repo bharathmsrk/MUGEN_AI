@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title and metadata-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Landing Page for Final Project for Web Development" />
+        <meta name="author" content="Bharath Radhakrishnan" />
+        <title>Musify</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/static/images/music.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/styles/styles.css" rel="stylesheet" />
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/scripts/display_time.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/static/scripts/search.js"></script>
+        <script src="/static/scripts/logging.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-0">
+                <a class="navbar-brand" href="/static/pages/main.html">
+                    <img src="/static/images/music.png" alt="Musify Logo" height="25"/>
+                    Musify
+                </a>
+                <div class="navbar" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/static/pages/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/static/pages/playlist.html">My Playlist</a></li>
+                        <li class="nav-item" id="logoutSignupLink">
+                            <!-- This will be populated by JavaScript -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header class="bg-dark py-5" style="background-image: url('/static/images/concert06.jpg');  background-size: cover; background-position: center;">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Discover the next generation of Rap Music</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Listen to ad-free AI generated on a touch</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Section-->
+        <form action="/generate_music" method="post" id="musicForm">
+            <!-- Your form content -->
+            <section class="py-2">
+                <section class="py-2">
+                    <div class="container">
+                        <div class="about" style="border: 2px solid #6c6767; padding: 20px; border-radius: 10px;">
+                            <h1 style="text-align: center;">Generate With Ease!</h1>
+                            <br />
+                            <div class="form-group">
+                                <div class="text-center">
+                                    <label for="auto">Automatic Generation</label>
+                                    <input type="radio" id="auto" name="generation" value="auto" onclick="handleGenerationSelection(this)">
+                                </div>
+                                <div class="text-center">
+                                    <label for="man">Manual Generation</label>
+                                    <input type="radio" id="man" name="generation" value="man" onclick="handleGenerationSelection(this)">
+                                </div>
+                                <br />
+                                <label for="subject">Enter Subject/Idea</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject/Idea" />
+                                <br />
+                                <label for="lyrics">Enter Lyrics</label>
+                                <input type="text" class="form-control" id="lyrics" name="lyrics" placeholder="Enter Lyrics" />
+                                <br />
+                                <label for="background">Background Music</label>
+                                <!-- <input type="text" class="form-control" id="background" placeholder="Background Music" disabled /> -->
+                                    <select class="form-control" id="background" name="background">
+                                        <option value="84a34767-12c0-4dc0-aa64-c292ac7d13c9" disabled selected>Select Track</option>
+                                        <option value="84a34767-12c0-4dc0-aa64-c292ac7d13c9">Backing Track 1</option>
+                                        <option value="31e4c6e5a-2782-4a7c-aa98-2a6c48904de5">Backing Track 2</option>
+                                        <option value="5fff1ec6-8736-4992-a842-8b78d37b8a8a">Backing Track 3</option>
+                                        <!-- Add more options for the rest of the voice IDs -->
+                                    </select>
+                                <br />
+                                <!-- <label for="voice">Select Voice</label>
+                                <input type="text" class="form-control" id="voice" placeholder="Select Voice" disabled />
+                                <br /> -->
+                                <label for="voice">Select Voice</label>
+                                    <select class="form-control" id="voice" name="voice">
+                                        <option value="dbcfb3f5-5e97-406f-af06-8193875e02da" disabled selected>Select Voice</option>
+                                        <option value="zwf">Voice Auto</option>
+                                        <option value="dbcfb3f5-5e97-406f-af06-8193875e02da">Voice 1</option>
+                                        <option value="30b67b62-51a8-43db-a1b4-edafd5b4cfea">Voice 2</option>
+                                        <option value="109cf329-a698-40ea-9f84-d4c66fdb9f68">Voice 3</option>
+                                        <option value="9033ec36-5066-48a9-86a7-c9b0fc368496">Voice 4</option>
+                                        <!-- Add more options for the rest of the voice IDs -->
+                                    </select>
+                                <br />
+                                <label for="speed">Select Speed (bpm)</label>
+                                <input type="text" class="form-control" id="speed" name="speed" placeholder="Select Speed" value="144" />
+                                <br />
+                                <div class="text-center">
+                                    <input type="submit" class="btn btn-primary" id="submit" value="Generate Music!" style="border: 2px solid #6c6767; border-radius: 10px;" />
+                                </div>
+                            </div>
+                            <!-- <div class="text-center audio-player">
+                                <img src="/static/images/playmusic.jpg" style="width: 600px; height: 400px;" class="audio-image" alt="Album Cover">
+                                <audio controls id="audioPlayer">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </form>
+        
+        <!-- <script>
+            function handleGenerationSelection(selectedRadio) {
+                var subjectInput = document.getElementById("subject");
+                var lyricsInput = document.getElementById("lyrics");
+                var backgroundInput = document.getElementById("background");
+                var voiceInput = document.getElementById("voice");
+                var speedInput = document.getElementById("speed");
+        
+                if (selectedRadio.value === "auto") {
+                    subjectInput.disabled = false;
+                    lyricsInput.disabled = true;
+                    backgroundInput.disabled = true;
+                    voiceInput.disabled = true;
+                    speedInput.disabled = true;
+                } else if (selectedRadio.value === "man") {
+                    subjectInput.disabled = true;
+                    lyricsInput.disabled = false;
+                    backgroundInput.disabled = false;
+                    voiceInput.disabled = false;
+                    speedInput.disabled = false;
+                }
+            }
+        </script>
+
+        <style>
+            /* Add CSS for disabled input elements */
+            input:disabled {
+                background-color: #f2f2f2; /* Light gray */
+            }
+        </style> -->
+        
+
+
+        <img src="/static/images/ads.webp" alt="Ads" style="width: 100%; height: 300px; object-fit: cover;" />
+           
+        <footer class="py-2 bg-dark">
+            <div class="container">
+                <!-- Copyright -->
+                <p class="m-0 text-center text-white">Copyright &copy; Musify, 2023</p>
+                <!-- Current Time -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center text-white">
+                            <p class="m-0">Current Time: <span id="currentDateTimeSpan"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

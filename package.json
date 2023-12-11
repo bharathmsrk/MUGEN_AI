@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.5.4",
+    "path": "^0.12.7"
+  },
+  "name": "mugen_ai",
+  "description": "Welcome to the Music Generation Research Project!  The project is dedicated to exploring the fascinating realm of music generation through the lens of cutting-edge models and tools. The goal is to investigate and integrate the available model in the field of generative music.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

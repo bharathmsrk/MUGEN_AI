@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title and metadata-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Search Results - Final Project for Web Development" />
+    <meta name="author" content="Bharath Radhakrishnan" />
+    <title>Musify</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/static/images/music.png" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/static/styles/styles.css" rel="stylesheet" />
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/static/scripts/display_time.js"></script>
+    <!-- ... other head elements ... -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/scripts/logging.js"></script>
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-0">
+            <a class="navbar-brand" href="/static/pages/main.html">
+                <img src="/static/images/music.png" alt="Musify Logo" height="25"/>
+                Musify
+            </a>
+            <div class="navbar" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/static/pages/main.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/static/pages/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/static/pages/playlist.html">My Playlist</a></li>
+                    <li class="nav-item" id="logoutSignupLink">
+                        <!-- This will be populated by JavaScript -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark py-5" style="background-image: url('/static/images/concert06.jpg');  background-size: cover; background-position: center;">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Discover the next generation of Rap Music</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Listen to ad-free AI generated on a touch</p>
+            </div>
+        </div>
+    </header>
+    <br />
+    <h1 style="padding-left: 80px; text-align: center;">View Search Results Below</h1>
+    <!-- Song Cards Container -->
+    <section class="py-2">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center songs-container">
+                <!-- Loop through matching songs and inject their original HTML content -->
+                <script>
+                    $(document).ready(function() {
+                        var matchingSongs = JSON.parse(sessionStorage.getItem("matchingSongs"));
+
+                        if (matchingSongs && matchingSongs.length > 0) {
+                            var songsContainer = $(".songs-container");
+
+                            for (var i = 0; i < matchingSongs.length; i++) {
+                                songsContainer.append($(matchingSongs[i].cardHtml));
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <img src="/static/images/ads.webp" alt="Ads" style="width: 100%; height: 300px; object-fit: cover;" />
+           
+    <footer class="py-2 bg-dark">
+        <div class="container">
+            <!-- Copyright -->
+            <p class="m-0 text-center text-white">Copyright &copy; Musify, 2023</p>
+            <!-- Current Time -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center text-white">
+                        <p class="m-0">Current Time: <span id="currentDateTimeSpan"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
