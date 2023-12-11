@@ -9,7 +9,7 @@ FYI - MUGEN_AI -> Final_Project -> routes
 
 This will run it locally on http://localhost:3000/
 
-Currently, diabled login. Can click on home directly to test.
+Can click on home directly to test or login.
 
 ## How to test demo?
 
