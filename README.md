@@ -13,24 +13,24 @@ Currently, diabled login. Can click on home directly to test.
 
 ## How to test demo?
 
-1. For automatic generation - 
-    a. * Select automatic generation
-    b. * Enter subject for automatic generation.
-    c. * Enter lyrics - Does not use it for automatic generation but needs to be entered.
-    ex1. "rap cat, hell make you clap", "hes got the hottest beats and the softest fur", "nothing to laugh at", "riding with the rap cat",
-    ex2. "I step on the scene with a mic in my hand", "Spitting hot fire, I'm the rap game's command", "From the city streets to the farthest land", "My rhymes cut sharp like a sword in the sand",
-    d. *Select any back gorund track - Does not use it for automatic generation but needs to be entered.
-    e. Select voice - Select ONLY "Voice Auto".
-    f. Slect speed - 144 Does not use it for automatic generation but needs to be entered.
+1. For automatic generation - <br /> 
+    a. * Select automatic generation <br /> 
+    b. * Enter subject for automatic generation.<br /> 
+    c. * Enter lyrics - Does not use it for automatic generation but needs to be entered.<br /> 
+    ex1. "rap cat, hell make you clap", "hes got the hottest beats and the softest fur", "nothing to laugh at", "riding with the rap cat", <br /> 
+    ex2. "I step on the scene with a mic in my hand", "Spitting hot fire, I'm the rap game's command", "From the city streets to the farthest land", "My rhymes cut sharp like a sword in the sand", <br /> 
+    d. *Select any back gorund track - Does not use it for automatic generation but needs to be entered. <br /> 
+    e. Select voice - Select ONLY "Voice Auto". <br /> 
+    f. Slect speed - 144 Does not use it for automatic generation but needs to be entered. <br /> 
 
-2. For manual generation - 
-    a. * Select automatic generation
-    b. * Enter subject - Does not use it for manual generation but needs to be entered.
-    c. * Enter lyrics
-    ex1. "rap cat, hell make you clap", "hes got the hottest beats and the softest fur", "nothing to laugh at", "riding with the rap cat",
-    ex2. "I step on the scene with a mic in my hand", "Spitting hot fire, I'm the rap game's command", "From the city streets to the farthest land", "My rhymes cut sharp like a sword in the sand",
-    d. *Select any back gorund track
-    e. Select voice - Select any voice other than "Voice Auto".
-    f. Slect speed - eg. 144 
+2. For manual generation - <br /> 
+    a. * Select automatic generation <br /> 
+    b. * Enter subject - Does not use it for manual generation but needs to be entered. <br /> 
+    c. * Enter lyrics <br /> 
+    ex1. "rap cat, hell make you clap", "hes got the hottest beats and the softest fur", "nothing to laugh at", "riding with the rap cat", <br /> 
+    ex2. "I step on the scene with a mic in my hand", "Spitting hot fire, I'm the rap game's command", "From the city streets to the farthest land", "My rhymes cut sharp like a sword in the sand", <br /> 
+    d. *Select any back gorund track <br /> 
+    e. Select voice - Select any voice other than "Voice Auto". <br /> 
+    f. Slect speed - eg. 144 <br /> 
 
 * - All fields need to be entered in the current demo regardless if they're used or not.
