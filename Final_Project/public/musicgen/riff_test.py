@@ -4,7 +4,7 @@ import os  # Import the os module to access environment variables
 import replicate
 
 # Set the API token as an environment variable
-os.environ['REPLICATE_API_TOKEN'] = "r8_ZWw2GAmM6GnmXotdysPBo0CCKxNlplY166bz5"
+os.environ['REPLICATE_API_TOKEN'] = "xxx"
 
 # Now, run the model using the API token
 # output = replicate.run(
