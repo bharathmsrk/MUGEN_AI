@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # API Key
-uberduck_auth = ("pub_gspglxmyaspvfwjsan", "pk_06cd03e4-ffbb-4224-afac-e8af36e5fd44")
+uberduck_auth = ("xxx", "xxx")
 
 # Define the route to display the form
 @app.route('/')
